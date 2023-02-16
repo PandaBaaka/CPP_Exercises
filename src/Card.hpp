@@ -25,7 +25,7 @@ std::string to_string(CardType type)
 class Card
 {
 public:
-    Card(const std::string &id, const CardType &type)
+    Card(std::string id, CardType type)
         : _id{id},
           _type{type} {};
 
