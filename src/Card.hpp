@@ -37,9 +37,14 @@ public:
 
     std::string get_description() const { return _description; }
 
+    std::string get_symbol() const { return _symbol; }
+
     void set_name(const std::string &name) { _name = name; }
 
     void set_description(const std::string &description) { _description = description; }
+
+protected:
+    std::string _symbol;
 
 private:
     std::string _id;

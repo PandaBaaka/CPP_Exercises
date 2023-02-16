@@ -32,6 +32,7 @@ public:
           _trap_type{trap_type}
     {
         set_name(name);
+        _symbol = u8"罠";
     };
 
     TrapType get_trap_type() const { return _trap_type; }

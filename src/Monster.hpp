@@ -47,6 +47,7 @@ public:
           _def{def}
     {
         set_name(name);
+        _symbol = to_symbol(attribute);
     };
 
     Attribute get_attribute() const { return _attribute; }

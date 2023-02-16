@@ -38,6 +38,7 @@ public:
           _spell_type{spell_type}
     {
         set_name(name);
+        _symbol = u8"魔";
     };
 
     SpellType get_spell_type() const { return _spell_type; }
