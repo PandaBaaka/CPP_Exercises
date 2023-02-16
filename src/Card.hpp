@@ -21,3 +21,29 @@ std::string to_string(CardType type)
         return "Trap";
     }
 }
+
+class Card
+{
+public:
+    Card(const std::string &id, const CardType &type)
+        : _id{id},
+          _type{type} {};
+
+    std::string get_id() const { return _id; }
+
+    CardType get_type() const { return _type; }
+
+    std::string get_name() const { return _name; }
+
+    std::string get_description() const { return _description; }
+
+    void set_name(const std::string &name) { _name = name; }
+
+    void set_description(const std::string &description) { _description = description; }
+
+private:
+    std::string _id;
+    CardType _type;
+    std::string _name = "";
+    std::string _description = "";
+};
