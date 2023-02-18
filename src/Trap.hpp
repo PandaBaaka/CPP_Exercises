@@ -17,11 +17,15 @@ std::string to_string(TrapType type)
     {
     case TrapType::Normal:
         return "Normal";
+
     case TrapType::Continuous:
         return "Continuous";
+
     case TrapType::Counter:
         return "Counter";
     }
+
+    return "";
 }
 
 class Trap : public Card

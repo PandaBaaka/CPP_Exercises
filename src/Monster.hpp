@@ -21,19 +21,27 @@ std::string to_symbol(Attribute attribute)
     {
     case Attribute::Dark:
         return u8"闇";
+
     case Attribute::Divine:
         return u8"神";
+
     case Attribute::Earth:
         return u8"地";
+
     case Attribute::Fire:
         return u8"炎";
+
     case Attribute::Light:
         return u8"光";
+
     case Attribute::Water:
         return u8"水";
+
     case Attribute::Wind:
         return u8"風";
     }
+
+    return "";
 }
 
 class Monster : public Card

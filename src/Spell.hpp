@@ -19,15 +19,21 @@ std::string to_string(SpellType type)
     {
     case SpellType::Normal:
         return "Normal";
+
     case SpellType::Equip:
         return "Equip";
+
     case SpellType::Continuous:
         return "Continuous";
+
     case SpellType::QuickPlay:
         return "Quick-Play";
+
     case SpellType::Field:
         return "Field";
     }
+
+    return "";
 }
 
 class Spell : public Card

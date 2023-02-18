@@ -15,11 +15,15 @@ std::string to_string(CardType type)
     {
     case CardType::Monster:
         return "Monster";
+
     case CardType::Spell:
         return "Spell";
+
     case CardType::Trap:
         return "Trap";
     }
+
+    return "";
 }
 
 class Card
