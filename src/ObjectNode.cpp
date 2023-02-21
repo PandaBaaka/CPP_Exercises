@@ -10,3 +10,8 @@ std::string ObjectNode::print() const
     result += '}';
     return result;
 }
+
+std::unique_ptr<ObjectNode> make_ptr(std::map<std::string, NodePtr> data)
+{
+    return nullptr;
+}

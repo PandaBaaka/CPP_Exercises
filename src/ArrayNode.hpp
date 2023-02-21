@@ -3,6 +3,7 @@
 #include "Node.hpp"
 #include "NodeKind.hpp"
 
+#include <memory>
 #include <string>
 #include <vector>
 
@@ -14,6 +15,8 @@ public:
     {}
 
     std::string print() const override;
+
+    static std::unique_ptr<ArrayNode> make_ptr(std::vector<NodePtr> data = {});
 
 private:
     std::vector<NodePtr> _data;

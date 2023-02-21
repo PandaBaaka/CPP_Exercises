@@ -12,3 +12,10 @@ std::string ArrayNode::print() const
     result += ']';
     return result;
 }
+
+std::unique_ptr<ArrayNode> ArrayNode::make_ptr(std::vector<NodePtr> data)
+{
+    auto ptr   = std::make_unique<ArrayNode>();
+    ptr->_data = std::move(data);
+    return ptr;
+}
