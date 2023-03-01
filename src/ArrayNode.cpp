@@ -24,3 +24,23 @@ std::unique_ptr<ArrayNode> ArrayNode::make_ptr(std::vector<NodePtr> data)
     ptr->_data = std::move(data);
     return ptr;
 }
+
+int ArrayNode::height() const
+{
+    int height = 0;
+    for (unsigned int i = 0; i < _data.size(); i++)
+    {
+        height = std::max(height, _data[i]->height());
+    }
+    return height + 1;
+}
+
+int ArrayNode::node_count() const
+{
+    int nc = 0;
+    for (unsigned int i = 0; i < _data.size(); i++)
+    {
+        nc += _data[i]->node_count();
+    }
+    return nc;
+}

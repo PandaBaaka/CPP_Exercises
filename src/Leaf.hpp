@@ -11,4 +11,6 @@ protected:
 
 public:
     virtual ~Leaf() {}
+    int height() const override { return 0; }
+    int node_count() const override { return 1; }
 };

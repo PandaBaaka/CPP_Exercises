@@ -27,3 +27,23 @@ std::unique_ptr<ObjectNode> ObjectNode::make_ptr(std::map<std::string, NodePtr> 
     ptr->_data = std::move(data);
     return ptr;
 }
+
+int ObjectNode::height() const
+{
+    int height = 0;
+    for (auto it = _data.begin(); it != _data.end(); ++it)
+    {
+        height = std::max(height, it->second->height());
+    }
+    return height + 1;
+}
+
+int ObjectNode::node_count() const
+{
+    int nc = 0;
+    for (auto it = _data.begin(); it != _data.end(); ++it)
+    {
+        nc += it->second->node_count();
+    }
+    return nc;
+}

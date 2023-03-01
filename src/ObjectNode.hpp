@@ -21,6 +21,9 @@ public:
     int  child_count() const { return _data.size(); }
     void insert(std::string key, NodePtr node);
 
+    int height() const override;
+    int node_count() const override;
+
 private:
     std::map<std::string, NodePtr> _data;
 };
