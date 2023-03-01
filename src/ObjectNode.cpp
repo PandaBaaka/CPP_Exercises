@@ -11,7 +11,7 @@ std::string ObjectNode::print() const
     return result;
 }
 
-std::unique_ptr<ObjectNode> make_ptr(std::map<std::string, NodePtr> data)
-{
-    return nullptr;
-}
+// std::unique_ptr<ObjectNode> make_ptr(std::map<std::string, NodePtr> data)
+// {
+//     return nullptr;
+// }
