@@ -1,5 +1,10 @@
 #include "ArrayNode.hpp"
 
+void ArrayNode::push_back(NodePtr node)
+{
+    _data.push_back(std::move(node));
+}
+
 std::string ArrayNode::print() const
 {
     std::string result = "[";

@@ -18,6 +18,9 @@ public:
 
     static std::unique_ptr<ArrayNode> make_ptr(std::vector<NodePtr> data = {});
 
+    int  child_count() const { return _data.size(); }
+    void push_back(NodePtr node);
+
 private:
     std::vector<NodePtr> _data;
 };
