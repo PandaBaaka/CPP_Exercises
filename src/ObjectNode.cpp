@@ -1,11 +1,21 @@
 #include "ObjectNode.hpp"
 
+void ObjectNode::insert(std::string key, NodePtr node)
+{
+    _data.emplace(key, std::move(node));
+}
+
 std::string ObjectNode::print() const
 {
+    std::string del    = "";
     std::string result = "{";
-    for (const auto& key : _data)
+    for (auto it = _data.begin(); it != _data.end(); ++it)
     {
-        // ...
+        result += del;
+        result += '"' + it->first + '"';
+        result += ":";
+        result += it->second->print();
+        del = ",";
     }
     result += '}';
     return result;
