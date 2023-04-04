@@ -83,6 +83,8 @@ void f4(bool b)
 
 // Q5: What does `if constexpr` do? What does `constexpr` mean?
 
+// It means that the expression is constant.
+
 /* ========================================================================= */
 bool f6()
 {
