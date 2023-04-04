@@ -19,13 +19,13 @@ void f1(bool b)
     else
     {
         MyClass<false> my_class {};
-        std::cout << my_class.hello() << std::endl:
+        std::cout << my_class.hello() << std::endl;
         // Note that class MyClass<b> has no hello() method;
     }
 }
 // Q1:
-//  - Does line `f1(true)` compiles ?
-//  - Does line `f1(false)` compiles ?
+//  - Does line `f1(true)` compiles ? N
+//  - Does line `f1(false)` compiles ? N
 
 /* ========================================================================= */
 template <bool b>
@@ -42,8 +42,8 @@ void f2()
 }
 
 // Q2:
-//  - Does line `f2<true>()` compiles ?
-//  - Does line `f2<false>()` compiles ?
+//  - Does line `f2<true>()` compiles ? N
+//  - Does line `f2<false>()` compiles ? N
 
 /* ========================================================================= */
 template <bool b>
@@ -59,8 +59,8 @@ void f3()
     }
 }
 // Q3:
-//  - Does line `f3<true>()` compiles ?
-//  - Does line `f3<false>()` compiles ?
+//  - Does line `f3<true>()` compiles ? Y
+//  - Does line `f3<false>()` compiles ? N
 
 /* ========================================================================= */
 void f4(bool b)
@@ -76,8 +76,8 @@ void f4(bool b)
 }
 
 // Q4:
-//  - Does line `f4(true)` compiles ?
-//  - Does line `f3(false)` compiles ?
+//  - Does line `f4(true)` compiles ? N
+//  - Does line `f3(false)` compiles ? N
 
 /* ========================================================================= */
 
